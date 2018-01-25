@@ -1,2 +1,2 @@
-# sfe
+# SFE
 Small frontend examples
