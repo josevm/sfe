@@ -6,6 +6,7 @@ var circlesArray = [];
 var wWidth = 0;
 var wHeight = 0;
 var baseRadius = 10;
+var ballsNumber = 500;
 
 var colors = [
 	'#324D5C',
@@ -82,7 +83,7 @@ function Circle(x, y, dx, dy, radius) {
 
 function circleGenerator() {
 	circlesArray = [];
-	for (var i = 0; i < 800; i++) {
+	for (var i = 0; i < ballsNumber; i++) {
 		var radius = Math.random() * baseRadius;
 		var x = Math.random() * (wWidth - radius * 2) + radius;
 		var y = Math.random() * (wHeight - radius * 2) + radius;
