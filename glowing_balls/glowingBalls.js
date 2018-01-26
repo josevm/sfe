@@ -6,7 +6,7 @@ var circlesArray = [];
 var wWidth = 0;
 var wHeight = 0;
 var baseRadius = 10;
-var ballsNumber = 500;
+var ballsNumber = 1000;
 
 var colors = [
 	'#324D5C',
@@ -29,7 +29,7 @@ window.addEventListener('mousemove', function(event) {
 
 function updateCanva() {
 	wWidth = window.innerWidth;
-	wHeight = window.innerHeight-10;
+	wHeight = window.innerHeight;
 	canvas.width = wWidth;
 	canvas.height = wHeight;
 	circleGenerator();
@@ -95,7 +95,8 @@ function circleGenerator() {
 
 function animation() {
 	requestAnimationFrame(animation);
-	c.clearRect(0, 0, wWidth, wHeight);
+	c.fillStyle = "#000000";
+	c.fillRect(0, 0, wWidth, wHeight);
 	for (var i = 0; i < circlesArray.length; i++) {
 		circlesArray[i].update();
 	}
